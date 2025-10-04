@@ -6,7 +6,7 @@ public class T00 {
     private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int a, b, hasil;
+        int a, b, tambah, kali;
 
         a = Integer.parseInt(input.nextLine());
         b = Integer.parseInt(input.nextLine());
@@ -20,23 +20,28 @@ public class T00 {
         } else {
             System.out.println("Bilangan kedua: Ganjil");
         }
-        if (a == b) {
-            System.out.println("Kedua bilangan sama besar");
-        }
         if (a > b) {
             System.out.println("Bilangan pertama lebih besar");
         } else {
-            System.out.println("Bilangan kedua lebih besar");
-        }
-        if (a % 2 == 0 && b % 2 == 0) {
-            hasil = a + b;
-            System.out.println("hasil penjumlahan: " + hasil);
-        } else {
-            if (a % 2 != 0 && b % 2 != 0) {
-                hasil = a * b;
-                System.out.println("Hasil perkalian: " + hasil);
+            if (a < b) {
+                System.out.println("Bilangan kedua lebih besar");
             } else {
-                System.out.println("berbeda jenis");
+                System.out.println("Kedua bilangan sama besar");
+            }
+        }
+        if (a % 2 == 0) {
+            if (b % 2 == 0) {
+                tambah = a + b;
+                System.out.println("Hasil penjumlahan: " + tambah);
+            } else {
+                System.out.println("Berbeda jenis");
+            }
+        } else {
+            if (b % 2 != 0) {
+                kali = a * b;
+                System.out.println("Hasil perkalian: " + kali);
+            } else {
+                System.out.println("Berbeda jenis");
             }
         }
     }
